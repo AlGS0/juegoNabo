@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Querys</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer">Tiempo restante: <span id="timer">30:00</span></div>
+    <div class="container">
+        <h1>Juego de Querys</h1>
+        <p>Escribe el término correcto para llegar al resultado deseado.</p>
+        <form id="queryForm">
+            <label for="queryInput">Ingresa tu query:</label>
+            <input type="text" id="queryInput" placeholder="Escribe aquí..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Modal de instrucciones -->
+    <div id="instruccionesModal" class="modal">
+        <div class="modal-content">
+            <h2>Instrucciones del Juego</h2>
+            <p>Debes adivinar la palabra correcta rellenando las queries. Cada 5 intentos recibirás una pista y tendrás un límite de 30 minutos para encontrar la solución. Si se te acaba el tiempo, tendrás la opción de pedir una pista extra o ver la solución directamente.</p>
+            <button id="aceptarInstruccionesBtn">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Modal de error -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <p id="errorTexto">Resultado incorrecto. Intenta de nuevo.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
